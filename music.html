@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Song</title>
+    <link rel="stylesheet" href="music.css"> <!-- External CSS -->
+	<script src="music.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Check if the page is being refreshed
+        if (performance.navigation.type === 1) {
+            // Redirect the user to the home page
+            window.location.href = "/index.html";
+        }
+        </script> <!-- Font Awesome for icons -->
+</head>
+<body>
+    <div class="music-container"> <!-- Changed class name for consistency -->
+        <h2>Add New Song</h2>
+        <form id="music-form" action="#" method="post">
+            <!-- Song Title -->
+            <div class="form-group">
+                <label for="title">Song Title:</label>
+                <input type="text" id="title" name="title" placeholder="Enter song title" required>
+            </div>
+
+            <!-- Artist -->
+            <div class="form-group">
+                <label for="artist">Artist:</label>
+                <input type="text" id="artist" name="artist" placeholder="Enter artist name" required>
+            </div>
+
+            <!-- Album -->
+            <div class="form-group">
+                <label for="album">Album:</label>
+                <input type="text" id="album" name="album" placeholder="Enter album name">
+            </div>
+
+            <!-- Genre -->
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <select id="genre" name="genre" required>
+                    <option value="">Select Genre</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Hip Hop">Hip Hop</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Classical">Classical</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Release Year -->
+            <div class="form-group">
+                <label for="year">Release Year:</label>
+                <input type="number" id="year" name="year" min="1900" max="9999" placeholder="Enter release year">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Add Song</button>
+
+            <audio id="pianoTune" autoplay>
+                <source src="/scott-buckley-reverie(chosic.com).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                var audio = document.getElementById('pianoTune');
+                
+                // Function to play audio when the document body is clicked
+                function playAudio() {
+                    audio.play();
+                    // Remove the event listener after the first click
+                    document.body.removeEventListener('click', playAudio);
+                }
+            
+                // Attach click event listener to the document body
+                document.body.addEventListener('click', playAudio);
+            });
+            </script>
+        </form>
+    </div>
+</body>

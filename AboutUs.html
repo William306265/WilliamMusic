@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="AboutUs.css">
+    <script src="AboutUs.js" defer></script>
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Check if the page is being refreshed
+        if (performance.navigation.type === 1) {
+            // Redirect the user to the home page
+            window.location.href = "/index.html";
+        }
+        </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Mission Statement -->
+        <h1>About Us</h1>
+        <p>We are a team of two passionate computer science students in our second year of university. Our goal is to create an innovative platform for learning music while listening to favorite tunes. We believe in combining technology and creativity to offer a unique learning experience.</p>
+
+        <!-- Company History -->
+        <div class="company-history">
+            <h2>Our Story</h2>
+            <p>Cyrine Hammad and William Hammad are university students who share a passion for music and technology. Our project was born from the idea that learning music should be enjoyable and accessible, combining education and entertainment.</p>
+        </div>
+
+        <!-- Meet the Team -->
+        <h2>Meet the Team</h2>
+
+        <div class="team-member" onclick="toggleBio('bio1')">
+            <h3>Cyrine Hammad</h3>
+            <p>Co-Founder, Developer</p>
+            <img src="/images/cyrine1.jpg" alt="Cyrine Hammad" class="team-photo">
+            <div class="bio" id="bio1">
+                <p>Cyrine is responsible for front-end development and user experience design. She has a deep interest in combining technology and music to create engaging experiences.</p>
+            </div>
+        </div>
+
+        <div class="team-member" onclick="toggleBio('bio2')">
+            <h3>William Hammad</h3>
+            <p>Co-Founder, Developer</p>
+            <img src="/images/william.jpg" alt="William Hammad" class="team-photo">
+            <div class="bio" id="bio2">
+                <p>William focuses on back-end development and database management. He enjoys creating robust systems that ensure a smooth user experience.</p>
+            </div>
+        </div>
+
+        <!-- Customer Testimonials -->
+        <div class="testimonials">
+            <h2>What People Are Saying</h2>
+            <blockquote>
+                "This platform has changed the way I learn music. It's engaging and fun. Highly recommended!"
+                <cite>– Jane Doe, Music Enthusiast</cite>
+            </blockquote>
+        </div>
+
+        <!-- Contact Information with Social Media Icons -->
+        <div class="contact-info">
+            
+            <p>Email: <a href="mailto:info@yourwebsite.com">info@yourwebsite.com</a></p>
+            <p>Follow us on social media:</p>
+            <ul>
+                <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.instagram.com/yourprofile/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            </ul>
+        </div>
+    </div>
+    <audio id="pianoTune" autoplay>
+        <source src="/scott-buckley-reverie(chosic.com).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var audio = document.getElementById('pianoTune');
+        
+        // Function to play audio when the document body is clicked
+        function playAudio() {
+            audio.play();
+            // Remove the event listener after the first click
+            document.body.removeEventListener('click', playAudio);
+        }
+    
+        // Attach click event listener to the document body
+        document.body.addEventListener('click', playAudio);
+    });
+    </script>
+</body>

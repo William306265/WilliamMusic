@@ -1,0 +1,122 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #121212, #3a3a3a); /* Gradient background */
+    color: #f1f1f1; /* Light text color for contrast */
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 50px auto; /* More margin at the top for spacing */
+    padding: 30px;
+    border-radius: 15px; /* Rounder corners for a softer look */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Center the content */
+}
+
+/* Style for paragraphs in the container */
+.container p {
+    margin: 10px 0; /* Consistent margin for paragraphs */
+    line-height: 1.6; /* Comfortable line height for readability */
+    color: #f1f1f1; /* Light text color for contrast */
+}
+
+/* Headings */
+h1, h2 {
+    color: #ff6f61; /* Vibrant coral color for headings */
+    font-family: 'Oswald', sans-serif; /* Distinctive font for headings */
+}
+
+/* Company History */
+.company-history {
+    padding: 15px; /* Additional padding */
+    border-radius: 10px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+}
+
+/* Style for paragraphs in the company history */
+.company-history p {
+    color: #f1f1f1; /* Light text color */
+    line-height: 1.6; /* Maintain consistent line height */
+    margin: 10px 0; /* Consistent margin */
+}
+
+/* Team Members */
+.team-member {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+    margin: 20px 0; /* More space between team members */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactive feel */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth hover transition */
+}
+
+.team-member:hover {
+    background-color: #ff6f61; /* Coral background on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+    color: white; /* White text on hover */
+}
+
+/* Team Photos */
+.team-photo {
+    width: 120px; /* Smaller photo size */
+    height: 120px; /* Smaller height */
+    border-radius: 50%; /* Circular shape */
+    border: 2px solid #ff6f61; /* Coral border */
+    object-fit: cover; /* Proper fit */
+}
+
+/* Bios */
+.bio {
+    display: none; /* Hidden by default */
+    text-align: left;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    color: #f1f1f1; /* Light text */
+}
+
+/* Testimonials */
+.testimonials {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: white; /* White text */
+    border-radius: 10px;
+}
+
+/* Contact Information */
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #ff6f61; /* Coral text */
+    transition: color 0.3s; /* Smooth transition on hover */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #ff6f61; /* Color on hover */
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    display: inline-block; /* Inline layout for list items */
+    margin: 0 10px; /* Space between items */
+}
+
+.contact-info i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css"> <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome for icons -->
+    <script src="contact.js" defer></script> <!-- External JavaScript -->
+    <script>
+        // Check if the page is being refreshed
+        if (performance.navigation.type === 1) {
+            // Redirect the user to the home page
+            window.location.href = "/index.html";
+        }
+        </script>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need assistance, please feel free to reach out.</p>
+
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.instagram.com/yourprofile/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            </ul>
+        </div>
+
+        <!-- Custom Alert/Modal Dialog -->
+        <div class="custom-alert" id="custom-alert">
+            <div class="alert-content">
+                <span class="close-alert" onclick="closeAlert()">&times;</span> <!-- Close button -->
+                <h2>Thank You!</h2>
+                <p>We'll get back to you soon.</p>
+            </div>
+        </div>
+    </div>
+    <audio id="pianoTune" autoplay>
+        <source src="/scott-buckley-reverie(chosic.com).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var audio = document.getElementById('pianoTune');
+        
+        // Function to play audio when the document body is clicked
+        function playAudio() {
+            audio.play();
+            // Remove the event listener after the first click
+            document.body.removeEventListener('click', playAudio);
+        }
+    
+        // Attach click event listener to the document body
+        document.body.addEventListener('click', playAudio);
+    });
+    </script>
+    <script src="contact.js"></script>
+</body>
+

@@ -1,0 +1,103 @@
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Font for the whole page */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #121212, #3a3a3a); /* Gradient background */
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+/* Contact Container */
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center; /* Centered content */
+	color : coral;
+}
+
+/* Custom Alert/Modal Dialog */
+.custom-alert {
+    position: fixed; /* Stays fixed on screen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent overlay */
+    display: none; /* Initially hidden */
+    justify-content: center; /* Center content */
+    align-items: center; /* Align content */
+}
+
+.alert-content {
+
+    background: white; /* White content area */
+    padding: 20px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Centered content */
+}
+
+.close-alert {
+    position: absolute; /* Position in the top-right corner */
+    top: 10px;
+    right: 10px;
+    cursor: pointer; /* Pointer cursor for interaction */
+    font-size: 24px; /* Larger font size */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+input, textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+    color: #f1f1f1; /* Light text */
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6f61; /* Coral border on focus */
+    outline: none; /* No default outline */
+}
+
+/* Submit Button */
+button {
+    background-color: #ff6f61; /* Coral background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.8); /* Darker on hover */
+}
+
+/* Social Media Styling */
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline-block; /* Inline layout for list items */
+    margin: 0 10px; /* Spacing between items */
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #ff6f61; /* Coral color for links */
+}
+
+.social-media a:hover {
+    color: rgba(255, 0, 0, 0.8); /* Darker color on hover */
+}

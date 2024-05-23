@@ -1,0 +1,59 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #121212, #3a3a3a); /* Gradient background */
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+/* Music Form Container */
+.music-container {
+    max-width: 800px;
+    margin: 50px auto; /* Space from the top */
+    padding: 30px;
+    border-radius: 15px; /* Rounder corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Centered content */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px; /* Space between form elements */
+    text-align: left; /* Align form fields to the left */
+}
+
+label {
+    font-size: 16px; /* Larger font for readability */
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+input, select {
+    width: 100%; /* Full width for form fields */
+    padding: 10px; /* Padding for form fields */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    color: #f1f1f1; /* Light text color */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff6f61; /* Coral border on focus */
+}
+
+/* Submit Button */
+button {
+    background-color: #ff6f61; /* Coral background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth hover transition */
+}
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.8); /* Darker on hover */
+}

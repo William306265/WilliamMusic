@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #121212, #3a3a3a); /* Gradient background */
+    color: #f1f1f1; /* Light text for contrast */
+}
+
+/* Classes Container */
+.classes-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px; /* Rounder corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Centered content */
+}
+
+/* Instrument Card Styling */
+.instrument-card {
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px; /* Padding */
+    border-radius: 10px; /* Rounded corners */
+    margin: 20px 0; /* Spacing between cards */
+    cursor: pointer; /* Pointer cursor for interaction */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.instrument-card:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Change color on hover */
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Instrument Details */
+.instrument-details {
+    display: none; /* Initially hidden */
+    background: rgba(0, 0, 0, 0.7); /* Dark background for details */
+    color: #f1f1f1; /* Light text for contrast */
+    padding: 10px; /* Padding for content */
+    border-radius: 8px; /* Rounded corners */
+    text-align: left; /* Align content to the left */
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: #ff6f61; /* Coral background */
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn-submit:hover {
+    background-color: rgba(255, 0, 0, 0.8); /* Darker on hover */
+}
+
+.instrument-details {
+    display: none;
+}
+.instrument-details.visible {
+    display: block;
+}
+.instrument-card {
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.instrument-card h2 {
+    margin: 0;
+}
+.hidden {
+    display: none;
+}
+.btn-submit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

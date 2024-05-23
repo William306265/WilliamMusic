@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Classes</title>
+    <link rel="stylesheet" href="classes.css"> <!-- External CSS -->
+    <script src="classes.js" defer></script> <!-- External JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
+    <script>
+        // Check if the page is being refreshed
+        if (performance.navigation.type === 1) {
+            // Redirect the user to the home page
+            window.location.href = "/index.html";
+        }
+        </script>
+</head>
+<body>
+    <div class="classes-container">
+        <h1>Choose Your Instrument</h1>
+        <p>Select an instrument to learn about it.</p>
+
+        <!-- Instrument Cards -->
+        <div class="instrument-card" onclick="toggleDetails('guitar')">
+            <h2><i class="fas fa-guitar"></i> Guitar</h2>
+            <div class="instrument-details" id="guitar">
+                <p>The guitar is a versatile stringed instrument used in various genres like rock, pop, jazz, and classical music.</p>
+                <ul>
+                    <li>Acoustic and electric versions</li>
+                    <li>6 to 12 strings</li>
+                    <li>Wide range of playing styles</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="instrument-card" onclick="toggleDetails('piano')">
+            <h2><i class="fas fa-piano"></i> Piano</h2>
+            <div class="instrument-details" id="piano">
+                <p>The piano is a classic keyboard instrument with a rich sound, used in classical, jazz, and contemporary music.</p>
+                <ul>
+                    <li>88 keys</li>
+                    <li>Grand and upright models</li>
+                    <li>Common in many music genres</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="instrument-card" onclick="toggleDetails('violin')">
+            <h2><i class="fas fa-violin"></i> Violin</h2>
+            <div class="instrument-details" id="violin">
+                <p>The violin is a stringed instrument used in classical, folk, and other genres.</p>
+                <ul>
+                    <li>Four strings</li>
+                    <li>Requires a bow to play</li>
+                    <li>Known for its expressive sound</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="instrument-card" onclick="toggleDetails('drums')">
+            <h2><i class="fas fa-drum"></i> Drums</h2>
+            <div class="instrument-details" id="drums">
+                <p>Drums are percussion instruments used in various genres like rock, jazz, and marching bands.</p>
+                <ul>
+                    <li>Different drum types</li>
+                    <li>Integral part of rhythm sections</li>
+                    <li>Used with other percussion instruments</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        
+        <button type="button" class="btn-submit" id="showFormButton">Sign Up for Classes</button>
+        
+    <div id="formContainer" class="hidden"></div>
+        <audio id="pianoTune" autoplay>
+            <source src="/scott-buckley-reverie(chosic.com).mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var audio = document.getElementById('pianoTune');
+            
+            // Function to play audio when the document body is clicked
+            function playAudio() {
+                audio.play();
+                // Remove the event listener after the first click
+                document.body.removeEventListener('click', playAudio);
+            }
+        
+            // Attach click event listener to the document body
+            document.body.addEventListener('click', playAudio);
+        });
+        </script>
+        <script >
+            function toggleDetails(instrumentId) {
+            var details = document.getElementById(instrumentId);
+            if (details.classList.contains('visible')) {
+                details.classList.remove('visible');
+            } else {
+                details.classList.add('visible');
+            }
+        }
+        </script>
+        <script>
+            
+        </script>
+    </div>
+</body>
